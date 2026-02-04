@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Home</title>
+</head>
+<body>
+  
+  <h1>
+    Home
+  </h1>
+  
+  <nav class="navbar"> 
+    <ul>
+      
+      <li><a href="index.html" id="home"class="active">Home</a></li>
+      <li><a href="about.html" id="about">About</a></li>      
+      <li><a href="contact.html" id="contact">Contacts</a></li>
+      
+    </ul>
+  </nav>
+   
+  <h2>
+    Welcome
+  </h2>
+  <div class="card">
+    <div class="inner-card">
+      <div class="card-front">
+  <h4>
+ Hi! I'm Calvin 
+  </h4>
+  
+  <p>
+    I’m a passionate software developer eager to learn, build real-world projects, and grow my skills to create impactful tech solutions. 
+  </p>
+  </div>
+      <div class="card-back">
+        
+        <p>
+          Thanks For Visiting My Profile, Scroll Down To Explore More In The Profile.
+        </p>
+      </div>
+     </div>
+    </div>
+  <h2 class="skills-title">Skills</h2>
+
+<div class="skill-scene">
+  <div class="skill-carousel" id="carousel">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>PHP</span>
+    <span>Java</span>
+    <span>MySQL</span>
+    <span>Linux</span>
+  </div>
+</div>
+   <h2>Projects</h2>
+  <table>
+  <section class="projects">
+    
+   
+    
+    <tr>
+      
+      <th>        
+        Name
+      </th>
+      
+      <th>
+        Description
+      </th>
+      
+      <th>
+        Tools\Languages
+      </th>
+    </tr>
+    
+    <tr>
+      
+      <td>
+        BRAND
+      </td>   
+      
+      <td >I Designed It For Global Artist To Show And Promote
+        There Work Globally And Gain Tremendous Benefits And Clients.
+      </td>
+      <td>
+        PHP,JavaScript,
+        CSS,MySQL,
+        HTML,VsCode,
+      </td>
+    </tr>
+    
+    <tr>
+      
+      <td>
+        Personal P
+      </td>   
+      
+      <td >
+        I Designed It To Show My Work And Experience Through Out My 
+        IT Jurney.
+      </td>
+      <td>
+        JavaScript,
+        CSS, HTML,
+        Mobile Phone Code Editor
+      </td>
+    </tr>
+    
+    <tr>
+      
+      <td>
+        MUSIC SITE
+      </td>   
+      
+      <td >
+        Designed For My Music Fam To Post ,Promote And View Music
+      </td>
+      <td>
+        JavaScript,
+        CSS, HTML,
+        PHP,React
+      </td>
+    </tr>
+  </section>
+   </table>
+  
+  <div class="btn">
+  <a href="https://github.com/ghostheriper011" class="btn-git">Git Hub</a>
+  <a href="" class="btn-live">LiveHub</a>
+   </div> 
+  </body>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const skills = carousel.querySelectorAll("span");
+  const total = skills.length;
+  const radius = 90;
+  let angle = 0;
+
+  // place skills in circle (X axis)
+  skills.forEach((skill, i) => {
+    const rotate = (360 / total) * i;
+    skill.dataset.rotate = rotate;
+  });
+
+  function animate() {
+    angle += 1.1; // speed
+
+    skills.forEach((skill) => {
+      const r = skill.dataset.rotate - angle;
+
+      const z = Math.cos((r * Math.PI) / 180);
+      const opacity = Math.max(0.2, z);
+      const scale = 0.6 + z * 0.5;
+
+      skill.style.transform =
+        `translate(-50%, -50%) rotateX(${r}deg) translateZ(${radius}px) scale(${scale})`;
+
+      skill.style.opacity = opacity;
+      skill.style.filter = `blur(${(1 - z) * 2}px)`;
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+</html>
