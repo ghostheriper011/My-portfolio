@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css"/>
   <title>Contact</title>
 </head>
@@ -17,9 +18,41 @@
       <li><a href="index.html" id="home">Home</a></li>
       <li><a href="about.html" id="about">About</a></li>      
       <li><a href="contact.html" id="contact" class="active">Contacts</a></li>
-    </ul>
-    
+    </ul> 
   </nav>
+  
+  <section id="contact">
+  <p>Have a question or want to work together? Send me a message!</p>
+
+  <!-- Contact Form -->
+  <form action="https://formspree.io/f/xeeljjyq" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <button type="submit" class="btn submit">Send Message</button>
+  </form>
+
+  <div class="contact-info">
+  <p><i class="fas fa-envelope"></i> Email: 
+     <a href="mailto: ghostoncode010@gmail.com">ghostoncode010@gmail.com</a></p>
+     
+  <p><i class="fas fa-phone"></i> Phone: 
+     <a href="tel:+27676697033">+27 67 669 7033</a></p>
+     
+  <p><i class="fab fa-linkedin"></i> LinkedIn: 
+     <a href="https://www.linkedin.com/in/calvin-masiu-497b55311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedIn</a></p>
+     
+  <p><i class="fab fa-github"></i> GitHub: 
+     <a href="https://github.com/ghostheriper011" target="_blank">GitHub</a></p>
+</div>
+</section>
+  
+  </body>
 <script src="script.js"></script>
-</body>
 </html>
