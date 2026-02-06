@@ -213,6 +213,9 @@ form {
   flex-direction: column;
   gap: 15px;
   max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input, textarea {
